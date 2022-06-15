@@ -1,0 +1,29 @@
+{% extends 'school/base.html' %}
+{% load static%}
+
+
+{% block content %}
+<div class="row">
+  <div class="side">
+    <h2>Adresgegevens</h2>
+    <h5>Muziekschool H&J</h5>
+    <p>Muziekschool Hannah en Jesse<br>
+	Industrieterrein Panningen 37,<br> 5981 NK Panningen<br>
+	0182-534352<br>
+	muziekschool@inlook.com<br></p>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2492.7499777170087!2d5.976007815489735!3d51.33411837960701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7485bd60bbd61%3A0x73a8c69eb69bad56!2sNHA%20Opleidingen!5e0!3m2!1snl!2snl!4v1616017792595!5m2!1snl!2snl" height="450" style="width: 100%; border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+  </div>
+  <div class="main">
+    <h1 id="center">Agenda:</h1><br />
+  {% for agendapost in agendaposts %}
+  <article id="card">
+      <time><i>gepubliceerd op: {{ agendapost.published_date }}</i></time>
+      <h2>{{ agendapost.title }}</h2>
+      <p>Omschrijving:{{ agendapost.description }}</p><hr>
+      <p>Datum:{{ agendapost.date }}</p>
+      <p>Tijd:{{ agendapost.time }}</p>
+      <p>Kosten:{{ agendapost.cost }}</p>
+  </article>
+  {% endfor %}
+{% endblock %}

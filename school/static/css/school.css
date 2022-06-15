@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Verdana;
+  margin: 0;
+}
+
+
+.header {
+  padding: 65px;
+  text-align: center;
+  background: #f57114;
+  color: white;
+}
+
+
+.navbar {
+  display: flex;
+  background-color: #bd560d;
+  border-bottom: 5px solid gold;
+}
+
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+
+.navbar a:hover {
+  background-color: #fc9803;
+  color: black;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.side {
+  flex: 30%;
+  background-color: #ffb785;
+  padding: 19px;
+}
+
+
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.main > h2{
+  color: #bd560d;
+}
+
+
+.afbeelding {
+  width: 100%;
+  padding: 20px;
+}
+
+.afbeeldingmain{
+  width: 40%;
+  padding: 20px;
+}
+
+#card{
+  width: 100%;
+  min-height: 200px;
+  background-color: white;
+  color: #bd560d;
+  padding: 5%;
+}
+
+article p {
+  display: inline;
+}
+
+#center{
+  text-align: center;
+}
+
+.footer {
+  padding: 19px;
+  text-align: center;
+  background: #d15f0f;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #d15f0f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #d18f0f;
+}
+
+
+/* simpele responsive stukje code */
+@media (max-width: 700px) {
+  .row, .navbar {
+    flex-direction: column;
+  }
+}

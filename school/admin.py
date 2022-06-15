@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Agenda
+from .models import Event
 
-admin.site.register(Agenda)
+admin.site.register(Event)
